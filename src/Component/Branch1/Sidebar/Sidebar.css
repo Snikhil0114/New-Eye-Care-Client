@@ -1,0 +1,79 @@
+/* Sidebar styling */
+.sidebar {
+  width: 200px; /* Default width for larger screens */
+  height: 100vh; /* Full viewport height */
+  background-color: #ffffff;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  padding: 15px; /* Default padding */
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0; /* Adjusted to top of viewport */
+  left: 0;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1); /* Default shadow */
+  z-index: 999;
+  transition: transform 0.3s ease; /* Smooth transition for mobile toggle */
+}
+
+/* Sidebar toggle button styling */
+.sidebar-toggle-button {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 10px; /* Adjust top position */
+  left: 10px; /* Adjust left position */
+  z-index: 1000; /* Ensure it is above the sidebar */
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 250px; /* Slightly wider for better mobile usability */
+    transform: translateX(-100%); /* Hide sidebar off-screen by default */
+    top: 0;
+    left: 0;
+  }
+
+  .sidebar.active {
+    transform: translateX(0); /* Show sidebar */
+  }
+
+  .sidebar-toggle-button {
+    display: block; /* Show the button on mobile */
+  }
+
+  .sidelogo {
+    margin-bottom: 10px; /* Adjust margin for mobile */
+  }
+
+  #sidebar-logo-img {
+    width: 60px; /* Smaller logo size for mobile */
+    height: 60px; /* Smaller logo size for mobile */
+  }
+
+  .sidelogo h6 {
+    font-size: 1em; /* Smaller font size for mobile */
+  }
+
+  .sidebar-item {
+    padding: 10px 12px; /* Adjust padding for mobile */
+    font-size: 0.9em; /* Smaller font size for mobile */
+  }
+
+  .menuLink span {
+    margin-left: 6px; /* Adjust margin for mobile */
+    font-size: 0.9em; /* Smaller font size for mobile */
+  }
+
+  .logout {
+    padding: 10px 12px; /* Adjust padding for mobile */
+    font-size: 0.9em; /* Smaller font size for mobile */
+  }
+}

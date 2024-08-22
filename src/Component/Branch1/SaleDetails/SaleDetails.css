@@ -1,0 +1,267 @@
+* {
+  box-sizing: border-box;
+}
+
+.sale-details-container {
+  width: 100%;
+  max-width: 800px; /* Increase max-width for more content space */
+  margin: 0 auto;
+  padding: 8px; /* Reduce padding */
+  font-family: Arial, sans-serif;
+  border: 1px solid #000;
+  background-color: #fff;
+}
+
+.bor {
+  border: 1px solid black;
+  padding: 8px; /* Reduce padding */
+}
+
+.add td {
+  width: 140px; /* Increase width to fit more content */
+}
+
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  flex-wrap: wrap; /* Allow wrapping to fit within container */
+}
+
+.logo img {
+  max-height: 30px; /* Further reduce image size */
+  width: auto;
+}
+
+.invoice-header p {
+  margin: 0;
+  font-size: 12px; /* Adjust font size for better fitting */
+}
+
+/* Company details */
+.company-details {
+  text-align: center;
+  font-size: 12px; /* Adjust font size */
+}
+
+.gst-number {
+  text-align: right;
+}
+
+/* Customer information */
+.customer-info {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  margin-bottom: 8px; /* Reduce margin */
+}
+
+.customer-row,
+.customer-row1,
+.customer-row2 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px; /* Reduce margin */
+}
+
+.customer-row p,
+.customer-row1 p,
+.customer-row2 p {
+  margin: 0;
+  padding: 0;
+  font-size: 12px; /* Adjust font size */
+}
+
+.customer-row p strong,
+.customer-row1 p strong,
+.customer-row2 p strong {
+  font-weight: bold;
+}
+
+/* Products section */
+.products-section {
+  margin-top: 10px; /* Adjust margin */
+}
+
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.products-table thead th {
+  border: 1px solid #ccc;
+  background-color: #f4f4f4;
+  padding: 4px; /* Reduce padding */
+  text-align: left;
+  font-size: 12px; /* Adjust font size */
+}
+
+.products-table tbody td {
+  border: 1px solid #ddd;
+  padding: 4px; /* Reduce padding */
+  text-align: left;
+  font-size: 12px; /* Adjust font size */
+}
+
+/* Payment details */
+.payment-details {
+  margin-top: 8px; /* Adjust margin as needed */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.payment-details div {
+  margin: 0;
+  padding: 0;
+}
+
+.payment-details .info-left,
+.payment-details .info-center,
+.payment-details .info-right {
+  margin: 0;
+}
+
+.payment-details p {
+  margin: 1px 0; /* Reduce the space between payment details items */
+  line-height: 1.2; /* Adjust line height if needed */
+}
+
+/* Eye details */
+.eye-details-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px; /* Decrease gap */
+  flex-wrap: wrap; /* Allow wrapping to fit within container */
+}
+
+.eye-details-table {
+  width: 48%; /* Adjust width for better fit */
+  border-collapse: collapse;
+  margin-bottom: 10px; /* Reduce space between tables */
+}
+
+.eye-details-table caption {
+  font-weight: bold;
+  margin-bottom: 6px; /* Reduce margin */
+  font-size: 12px; /* Adjust font size */
+}
+
+/* Hide empty cells */
+.eye-details-table td:empty,
+.eye-details-table th:empty {
+  border: none;
+  background-color: white;
+}
+
+.eye-details-table th,
+.eye-details-table td {
+  padding: 4px; /* Reduce padding */
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 12px; /* Adjust font size */
+}
+
+.eye-details-table th {
+  background-color: #f4f4f4;
+}
+
+.eye-details-table .add {
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Terms */
+.terms {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px; /* Adjust margin */
+  font-size: 12px; /* Adjust font size */
+}
+/* Ensure the bor container is positioned relative */
+.bor {
+  position: relative; /* Add this line */
+  border: 1px solid black;
+  padding: 8px; /* Reduce padding */
+}
+.Thankyounote {
+  text-align: center;
+  font-size: 18px;
+
+  margin-top: 20px;
+}
+
+/* Styles for Sign class positioned inside the bor container */
+
+/* Print button */
+.print-button {
+  display: block;
+  margin: 10px auto;
+  padding: 6px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: center;
+
+  color: #ffffff;
+  background-color: #307dc1;
+  border: none;
+  border-radius: 4px;
+}
+
+.print-button:hover {
+  background-color: #214c88;
+}
+
+.terms-and-conditions {
+  margin-top: 20px;
+}
+
+.Sign {
+  text-align: end;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: px;
+}
+
+.Thankyounote {
+  text-align: center;
+  font-size: 18px;
+
+  margin-top: 0px; /* Spacing between the sign and thank you note */
+}
+
+.Technopulse {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 5px; /* Spacing between thank you note and Technopulse */
+}
+
+/* Styles for print */
+@media print {
+  .print-button {
+    display: none;
+  }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .sale-details-container {
+    padding: 6px; /* Reduce padding */
+  }
+
+  .invoice-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .eye-details-container {
+    flex-direction: column;
+  }
+
+  .eye-details-table {
+    width: 100%;
+    margin: 6px 0; /* Adjust margin */
+  }
+}
